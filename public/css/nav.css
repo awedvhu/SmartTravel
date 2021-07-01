@@ -1,0 +1,36 @@
+*{
+            margin: 0;
+            padding: 0;
+}
+.header_center{
+            width: 100%;
+            max-width: 1328px;
+            height: 100px;
+            padding: 0;
+            margin: 0 auto;
+}
+.header_center,
+.main_nav,
+.main_nav .main_news,
+.main_nav .main_places,
+.main_nav .main_inf,
+.main_nav .main_tri,
+.main_nav .main_feedback,
+.main_nav .main_login{
+            display: flex;
+}
+.main_nav{
+            position:absolute;
+            right:120px;
+}
+.main_nav h4{
+            margin: 15px 0 0 7px;
+}
+.main_nav a{
+            margin: 25px 10px 0 10px;
+            text-decoration: none;
+            color: rgb(84, 84, 84);
+}
+.header{
+            margin: 20px;
+}
