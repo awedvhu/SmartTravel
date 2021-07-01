@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="{{ asset('css/nav.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/body.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/footer.css') }}" rel="stylesheet" type="text/css" />
     <script src="{{ asset('js/body.js') }}" type="text/javascript"></script>
     <title>台北旅遊網</title>
 
@@ -20,7 +21,9 @@
     <div>
         @yield('main');
     </div>
-
+    <div>
+        @include('footer');
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
