@@ -95,7 +95,7 @@
              </div>
          </a>
          <hr>
-         <a href="#">
+         <a href="{{ asset('/latest_news') }}">
              <div class="read_more">
                  閱讀更多
              </div>
