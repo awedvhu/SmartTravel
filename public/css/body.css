@@ -1,161 +1,195 @@
-.body_inf .btn1,.btn2{
-    width: 200px;
-    height: 100px;
-    border-radius: 10px;
-    background-color: #81c2c5;
-    color:#fff;
-    border: #81c2c5;
-    font-size: 1.75rem;
-  }
-  .btn1{
-    margin: 50px 15px 0 100px;
-  }
-  .body_inf{
-    display: flex;
-    height: 200px;
-    background: linear-gradient(to bottom,#d9f4f7 0%,#fff 210px);
-  }
-  .body_inf .body_weather{
-    background-color: #81c2c5;
-    width: 430px;
-    height: 100px;
-    border-radius: 10px;
-    margin: 50px 0 0 80px;
-  }
-  .body_inf .body_weather #time{
-    color: #fff;
-    text-align: center;
-    margin: 40px 20px 0 0;
-  }
-  .hot_keyword{
-    margin: 20px 0 0 0;
-    width: 360px;
-    height: 40px;
-  }
-  .hot_keyword a{
-    text-decoration: none;
-    color: #000;
-  } 
-  .inf_body_search{
-    margin: 50px 0px 0 100px;
-    width: 360px;
-    height: 40px;
-  }
-  .body_search{
-    display: flex;
-  }
-  .body_search button{
-    border: #81c2c5;
-    background-color: #81c2c5;
-    padding: 0px 10px 0 10px;
-    width: 40px;
-    height: 40px;
-    margin: 0px 50px 0 0px;  
-  }
-  .body_search i{
-    color: #fff;
-  }
-  .body_search input{
-    border-color:#81c2c5;
-    border-width:3px;
-    background-color: #fff;
-    padding: 0px 0 0 20px;
-    width: 360px;
-    height: 40px;
-    margin: 0px 0px 0 0px;
-  }
-  .body_search button:focus{
-    outline: none;
-    padding:  0px 10px 0 10px ;
-  }
-  .body_search input:focus{
-    outline: none;
-    padding:  0px 10px 0 20px ;
-  }
-  .body_search button{
-    border-radius: 0px 50px 50px 0px; 
-  }
-  .body_search input{
-    border-radius:  150px 0 0 150px ;
-  }
-  .body_menu{
-    display: flex;
-  }
-  .activity h4,
-  .news_message h4,
-  #post_time{
-    color:#81c2c5;
-  }
-  .news_message a,
-  .activity a{
-    text-decoration: none;
-    color: rgb(99, 99, 99);
-  }
-  .news_message img,
-  .activity img{
-    height: 100px;
-    width: 100px;
-    margin: 0 20px 0 0; 
-    
-  }
-  .news1{
-    display: flex;
-  }
-  .news1{
-    display: flex;
-  }
-  .news1:hover{
-    background-color: #ecf9fa;
-    transition: .3s;
-  }
-  .news_message{
-    margin: 0 50px 0 100px;
-    width: 600px;
-  }
-  .activity{
-    margin: 0 100px 0 50px;
-    width: 600px;
-  }
-  #post_time{
-    margin: 0 20px 0 0;
-    height: 20px;
-    width: 100px;
-    position: relative;
-  }
-  .news_message p,
-  .activity p{
-    display: inline;
-    margin: 35px 0 10px 120px;
-    position: absolute;
-    width: 480px;
-  }
-  .news_message .read_more,
-  .activity .read_more{
-    margin: 0 0 0 270px;
-    color:#fff;
-    width: 104px;
-    border-radius: 100px;
-    text-align: center;
-    background-color: #81c2c5;
-  }
-  .body_place_menu_first{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .body_place .place1 img{
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
-    margin: 20px 70px 20px 70px;
-  }
-  .body_place_title h2{
-    text-align: center;
-    color: #81c2c5;
-    margin: 50px 0 20px 0;
-  }
-  .place_img{
-    height: 20px;
-    background: linear-gradient(270deg,#d9f4f7 10%,#fff 100%);
-    margin: 10px;
-  }
+.body_inf .btn1,
+.btn2 {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #81c2c5;
+  color: #fff;
+  border: #81c2c5;
+  font-size: 1.75rem;
+}
+
+.btn1 {
+  margin: 50px 15px 0 100px;
+}
+
+.body_inf {
+  display: flex;
+  height: 200px;
+  background: linear-gradient(to bottom, #d9f4f7 0%, #fff 210px);
+}
+
+.body_inf .body_weather {
+  background-color: #81c2c5;
+  width: 430px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 50px 0 0 80px;
+}
+
+.body_inf .body_weather #time {
+  color: #fff;
+  text-align: center;
+  margin: 40px 20px 0 0;
+}
+
+.hot_keyword {
+  margin: 20px 0 0 0;
+  width: 360px;
+  height: 40px;
+}
+
+.hot_keyword a {
+  text-decoration: none;
+  color: #000;
+}
+
+.inf_body_search {
+  margin: 50px 0px 0 100px;
+  width: 360px;
+  height: 40px;
+}
+
+.body_search {
+  display: flex;
+}
+
+.body_search button {
+  border: #81c2c5;
+  background-color: #81c2c5;
+  padding: 0px 10px 0 10px;
+  width: 40px;
+  height: 40px;
+  margin: 0px 50px 0 0px;
+}
+
+.body_search i {
+  color: #fff;
+}
+
+.body_search input {
+  border-color: #81c2c5;
+  border-width: 3px;
+  background-color: #fff;
+  padding: 0px 0 0 20px;
+  width: 360px;
+  height: 40px;
+  margin: 0px 0px 0 0px;
+}
+
+.body_search button:focus {
+  outline: none;
+  padding: 0px 10px 0 10px;
+}
+
+.body_search input:focus {
+  outline: none;
+  padding: 0px 10px 0 20px;
+}
+
+.body_search button {
+  border-radius: 0px 50px 50px 0px;
+}
+
+.body_search input {
+  border-radius: 150px 0 0 150px;
+}
+
+.body_menu {
+  width: 100% !important;
+  display: flex;
+  margin: auto !important;
+}
+
+.activity h4,
+.news_message h4,
+#post_time {
+  color: #81c2c5;
+}
+
+.news_message a,
+.activity a {
+  text-decoration: none;
+  color: rgb(99, 99, 99);
+}
+
+.news_message img,
+.activity img {
+  height: 100px;
+  width: 100px;
+  margin: 0 20px 0 0;
+
+}
+
+.news1 {
+  display: flex;
+}
+
+.news1 {
+  display: flex;
+}
+
+.news1:hover {
+  background-color: #ecf9fa;
+  transition: .3s;
+}
+
+.news_message {
+  margin: 0 50px 0 100px;
+  width: 600px;
+}
+
+.activity {
+  margin: 0 100px 0 50px;
+  width: 600px;
+}
+
+#post_time {
+  margin: 0 20px 0 0;
+  height: 20px;
+  width: 100px;
+  position: relative;
+}
+
+.news_message p,
+.activity p {
+  display: inline;
+  margin: 35px 0 10px 120px;
+  position: absolute;
+  width: 480px;
+}
+
+.news_message .read_more,
+.activity .read_more {
+  margin: 0 0 0 270px;
+  color: #fff;
+  width: 104px;
+  border-radius: 100px;
+  text-align: center;
+  background-color: #81c2c5;
+}
+
+.body_place_menu_first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body_place .place1 img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  margin: 20px 70px 20px 70px;
+}
+
+.body_place_title h2 {
+  text-align: center;
+  color: #81c2c5;
+  margin: 50px 0 20px 0;
+}
+
+.place_img {
+  height: 20px;
+  background: linear-gradient(270deg, #d9f4f7 10%, #fff 100%);
+  margin: 10px;
+}

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\LatestNew;
+use Illuminate\Support\Facades\DB;
+use App\Models\Attraction;
 use Illuminate\Http\Request;
 
-class LatestNewController extends Controller
+class AttractionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,9 @@ class LatestNewController extends Controller
     public function index()
     {
         //
-        $latest_new = LatestNew::all();
-        return view('latestNew.index');
+        $attractions = DB::table('attractions')
+            ->get();
+        return view('attraction.index');
     }
 
     /**
@@ -27,7 +29,7 @@ class LatestNewController extends Controller
     public function create()
     {
         //
-        return view('latestNew.create');
+        return view('attraction.create');
     }
 
     /**
@@ -39,36 +41,43 @@ class LatestNewController extends Controller
     public function store(Request $request)
     {
         //
-        /*
-         $table->string('title');
-            $table->string('information');
-            $table->string('date');
-            $table->string('photo_path');
-        */
-        $request->validate([
+        /*$request->validate([
+            //'sid' => 'required',
             'title' => 'required',
             'information' => 'required',
             'date' => 'required',
-            'photo_path' => 'required'
+            //'photo_path' => 'required|image|max:2048'
         ]);
-        $LatestNew = new LatestNew([
+
+        // * 讀取 upload file
+        $image = $request->file('photo');
+        // * 存檔 image
+        $new_name = 'attraction_' . now()->format('YmdHis') . rand() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('images'), $new_name);
+        // * 更新對應欄位
+
+        $attraction = new Attraction([
             'title' => $request->get('title'),
             'information' => $request->get('information'),
             'date' => $request->get('date'),
-            'photo_path' => $request->get('photo_path')
+            //'photo_path' => $new_name
         ]);
-        $LatestNew->save();
-        return redirect('/latest_news')->with('success', 'latest_news
-            saved!');
+        //
+        try {
+            $attraction->save();
+            return redirect('/attractions')->with('success', '推薦圖書資料已成功儲存!');
+        } catch (\Exception $ex) {
+            return redirect('/attractions')->with('fail', '錯誤: ' . $ex->getMessage());
+        }*/
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\LatestNew  $latestNew
+     * @param  \App\Models\Attraction  $attraction
      * @return \Illuminate\Http\Response
      */
-    public function show(LatestNew $latestNew)
+    public function show(Attraction $attraction)
     {
         //
     }
@@ -76,10 +85,10 @@ class LatestNewController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\LatestNew  $latestNew
+     * @param  \App\Models\Attraction  $attraction
      * @return \Illuminate\Http\Response
      */
-    public function edit(LatestNew $latestNew)
+    public function edit(Attraction $attraction)
     {
         //
     }
@@ -88,10 +97,10 @@ class LatestNewController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\LatestNew  $latestNew
+     * @param  \App\Models\Attraction  $attraction
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, LatestNew $latestNew)
+    public function update(Request $request, Attraction $attraction)
     {
         //
     }
@@ -99,10 +108,10 @@ class LatestNewController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\LatestNew  $latestNew
+     * @param  \App\Models\Attraction  $attraction
      * @return \Illuminate\Http\Response
      */
-    public function destroy(LatestNew $latestNew)
+    public function destroy(Attraction $attraction)
     {
         //
     }

@@ -1,16 +1,13 @@
 <header class="header">
     <div class="header_center">
-        <div class="main_logo">
-            <img src="{{ asset('img/header_logo') }}" title="台北旅遊網" height="100px" width="250px">
-        </div>
+        <a href="{{ asset('/') }}">
+            <div class="main_logo">
+                <img src="{{ asset('img/header_logo.png') }}" title="台北旅遊網" height="100px" width="250px">
+            </div>
+        </a>
         <nav class="main_nav">
-            <a href="#" id="main_news">
-                <div class="main_news">
 
-                    <h4>最新消息</h4>
-                </div>
-            </a>
-            <a href="#" id="main_places">
+            <a href="{{ asset('/latest_news') }}" id="main_places">
                 <div class="main_places">
 
                     <h4>特色景點</h4>
